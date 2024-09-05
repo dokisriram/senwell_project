@@ -1,0 +1,82 @@
+Task: Build a Simple RESTful API
+
+Description: You are required to create a simple RESTful API using Node.js and Express. The API will manage a collection of books. Each book should have the following properties:
+
+
+id: A unique identifier (UUID or auto-incremented integer).
+
+title: The title of the book (string).
+
+author: The author of the book (string).
+
+publishedDate: The published date of the book (date).
+
+pages: The number of pages in the book (integer).
+
+Requirements:
+
+GET /books:
+
+Retrieve a list of all books.
+
+Response should include all the books in JSON format.
+
+GET /books/:
+
+Retrieve a single book by its id.
+
+Return a 404 error if the book is not found.
+
+POST /books:
+
+Add a new book.
+
+The request body should contain the title, author, publishedDate, and pages of the book.
+
+Return the newly created book in the response.
+
+PUT /books/:
+
+Update the details of a book by its id.
+
+The request body should allow updating any of the book's properties (title, author, publishedDate, pages).
+
+Return the updated book in the response.
+
+Return a 404 error if the book is not found.
+
+DELETE /books/: 
+
+Delete a book by its id.
+
+Return a 204 status code if the deletion is successful.
+
+Return a 404 error if the book is not found.
+
+Error Handling:
+
+Proper error handling for invalid routes or HTTP methods.
+
+Return appropriate status codes and error messages for different scenarios.
+
+Bonus Points:
+
+Use a simple in-memory data store (an array) to hold the books.
+
+Implement input validation using a library like Joi or express-validator.
+
+Write basic unit tests for the API endpoints using a testing framework like Mocha or Jest.
+
+Example Endpoints:
+
+GET /books should return a list of books.
+
+GET /books/1 should return a specific book with ID 1.
+
+POST /books should allow adding a new book.
+
+PUT /books/1 should allow updating the book with ID 1.
+
+DELETE /books/1 should delete the book with ID 1.
+
+Expected Completion Time:
